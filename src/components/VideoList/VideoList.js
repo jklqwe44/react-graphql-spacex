@@ -16,11 +16,11 @@ const VideoList = ({ data = [] }) => {
                 </div>
                 <div className="sub-title">
                   <div className="date" title={dayjs(item.launch_date_local).format('YYYY-MM-DD HH:mm:ss')}>
-                    <img src='/svg/date.svg'/>
+                    <img src='svg/date.svg'/>
                     <span>{dayjs(item.launch_date_local).format('YYYY-MM-DD')}</span>
                   </div>
                   <div className="site-name"title={item.launch_site.site_name_long}>
-                    <img src='/svg/map.svg'/>
+                    <img src='svg/map.svg'/>
                     <span>
                       {item.launch_site.site_name}
                     </span>

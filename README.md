@@ -7,3 +7,5 @@
 npm install後 npm start即可執行專案
 
 Code: [https://github.com/jklqwe44/react-graphql-spacex](https://github.com/jklqwe44/react-graphql-spacex)
+
+Demo: [https://jklqwe44.github.io/react-graphql-spacex/](https://jklqwe44.github.io/react-graphql-spacex/)

@@ -73,7 +73,7 @@ function Main() {
 
   return (
     <div className="main">
-      <img className="background-logo" src='/spacex_logo.png'/>
+      <img className="background-logo" src='spacex_logo.png'/>
       {isLoading && <Loading />}
       <Search onSearch={handleSearch}/>
       <div 
