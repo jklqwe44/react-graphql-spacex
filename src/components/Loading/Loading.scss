@@ -1,0 +1,49 @@
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+  }
+
+  .spacex-logo {
+    position: absolute;
+    width: 100%;
+    padding-left: 5%;
+    animation: rotate 4s infinite linear;
+    transform: rotateY(90deg);
+  }
+
+  .spacex-icon {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 5%;
+    padding-left: 55%;
+    animation: rotate 4s infinite linear;
+    animation-delay: -2s;
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes rotate {
+  0%,
+  100% {
+    transform: rotateY(0deg);
+  }
+  25%,
+  75% {
+    transform: rotateY(90deg);
+  }
+}
