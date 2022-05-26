@@ -14,10 +14,15 @@ const Search = ({ onSearch }) => {
     onSearch(value);
   }
 
+  const handleRefresh = () => {
+    setValue('')
+    onSearch('');
+  }
+
   return (
     <div className="search" >
-      <img className="spacex-logo" src='spacex_logo.png'/>
-      <img className="spacex-logo-right" src='spacex_logo_2.png'/>
+      <img className="spacex-logo" src='spacex_logo.png' onClick={handleRefresh} alt='refresh button'/>
+      <img className="spacex-logo-right" src='spacex_logo_2.png' alt='right logo'/>
       <div className="content">
         <input 
           value={value}
@@ -26,7 +31,7 @@ const Search = ({ onSearch }) => {
           onChange={e => setValue(e.target.value)}
         />
         <div className="button" onClick={handleClick}>
-          <img src='svg/search.svg'/>
+          <img src='svg/search.svg' alt='search icon'/>
         </div>
       </div>
     </div>

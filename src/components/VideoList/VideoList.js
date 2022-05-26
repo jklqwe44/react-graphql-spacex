@@ -9,18 +9,18 @@ const VideoList = ({ data = [] }) => {
       {data.map(item => (
           <div key={item.id} className="video-item">
             <div className="label">
-              <img className="label-icon" src={item.links.mission_patch_small}/>
+              <img className="label-icon" src={item.links.mission_patch_small} alt='mission patch icon'/>
               <div className="label-text">
                 <div className="title" title={item.mission_name}>
                   {item.mission_name}
                 </div>
                 <div className="sub-title">
                   <div className="date" title={dayjs(item.launch_date_local).format('YYYY-MM-DD HH:mm:ss')}>
-                    <img src='svg/date.svg'/>
+                    <img src='svg/date.svg' alt='date icon'/>
                     <span>{dayjs(item.launch_date_local).format('YYYY-MM-DD')}</span>
                   </div>
                   <div className="site-name"title={item.launch_site.site_name_long}>
-                    <img src='svg/map.svg'/>
+                    <img src='svg/map.svg' alt='map icon'/>
                     <span>
                       {item.launch_site.site_name}
                     </span>
