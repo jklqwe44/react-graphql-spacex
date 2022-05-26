@@ -4,7 +4,12 @@
 - 使用react-player顯示Youtube嵌入播放
 - 可用mission name對資料進行搜尋
 
-npm install後 npm start即可執行專案
+
+```bash
+npm install
+npm start
+```
+即可執行專案
 
 Code: [https://github.com/jklqwe44/react-graphql-spacex](https://github.com/jklqwe44/react-graphql-spacex)
 
