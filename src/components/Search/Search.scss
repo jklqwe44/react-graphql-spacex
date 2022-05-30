@@ -11,6 +11,17 @@
   box-shadow: 0 0px 6px rgb(3 47 82 / 62%);
   overflow: hidden;
 
+  &::before {
+    content: ' ';
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    top: -30px;
+    right: -60px;
+    background-image: url('/assets/spacex_logo_2.png');
+    background-size: contain;
+  }
+
   .spacex-logo {
     min-width: 100px;
     height: 200%;
@@ -25,25 +36,6 @@
     @include mobile {
       height: 120%;
       margin-left: 3%;
-    }
-  }
-
-  .spacex-logo-right {
-    position: absolute;
-    height: 220%;
-    top: -70%;
-    right: -5%;
-
-    @include pad {
-      height: 180%;
-      top: -40%;
-      right: -7%;
-    }
-
-    @include mobile {
-      height: 150%;
-      top: -12%;
-      right: -16%;
     }
   }
 

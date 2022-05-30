@@ -79,7 +79,12 @@
     .player-wrapper {
       margin-top: 5px;
       position: relative;
-      padding-top: 56.25%; 
+      padding-top: 56.25%;
+      background-color: black;
+      background-image: url('/assets/spacex_logo.png');
+      background-size: 60% 60%;
+      background-repeat: no-repeat;
+      background-position: 65% 50%;
     }
 
     .react-player {

@@ -10,7 +10,7 @@ const PAGE_SIZE = 12
 
 const GET_LAUNCHES = gql`
 query Launches($missionName: String!, $offset: Int) {
-  launches(find: {mission_name: $missionName}, limit: ${PAGE_SIZE}, offset: $offset) {
+  launchesPast(find: {mission_name: $missionName}, limit: ${PAGE_SIZE}, offset: $offset) {
     id
     details
     links {
@@ -37,14 +37,14 @@ function Main() {
   const listInnerRef = useRef();
 
   const { error, refetch } = useQuery(GET_LAUNCHES, {
-    variables: { missionName: '', offset: 0 },
+    variables: { missionName: '', offset: 0},
     notifyOnNetworkStatusChange: true,
     onCompleted: (data) => {
-      if(!data.launches || data.launches.length === 0) {
+      if(!data.launchesPast || data.launchesPast.length === 0) {
         setIsEnding(true);
       }
       setIsLoading(false);
-      setLaunches(prev => [...prev, ...data.launches]);
+      setLaunches(prev => [...prev, ...data.launchesPast]);
     }
   });
 
@@ -73,7 +73,6 @@ function Main() {
 
   return (
     <div className="main">
-      <img className="background-logo" src='spacex_logo.png'  alt='background logo'/>
       {isLoading && <Loading />}
       <Search onSearch={handleSearch}/>
       <div 

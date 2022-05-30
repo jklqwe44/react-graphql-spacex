@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import spacexLogo from '../../assets/spacex_logo.png'; 
+import searchSVG from '../../assets/svg/search.svg'; 
 import './Search.scss';
 
 const Search = ({ onSearch }) => {
@@ -15,14 +17,13 @@ const Search = ({ onSearch }) => {
   }
 
   const handleRefresh = () => {
-    setValue('')
+    setValue('');
     onSearch('');
   }
 
   return (
     <div className="search" >
-      <img className="spacex-logo" src='spacex_logo.png' onClick={handleRefresh} alt='refresh button'/>
-      <img className="spacex-logo-right" src='spacex_logo_2.png' alt='right logo'/>
+      <img className="spacex-logo" src={spacexLogo} onClick={handleRefresh} alt='refresh button'/>
       <div className="content">
         <input 
           value={value}
@@ -31,7 +32,7 @@ const Search = ({ onSearch }) => {
           onChange={e => setValue(e.target.value)}
         />
         <div className="button" onClick={handleClick}>
-          <img src='svg/search.svg' alt='search icon'/>
+          <img src={searchSVG} alt='search icon'/>
         </div>
       </div>
     </div>
